@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>640</x>
+      <y>210</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Carro
+--
+-cantidadDeOcupantes: int
+-fechaDeIngreso: String
+-ubicacion: matriz[int][int]
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>290</x>
+      <y>210</y>
+      <w>210</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>Tablero
+--
+-Array carros
+-ArrayList huevos
+
+--
++crearCarro()
++agregarKromi()
++agregarCaguano()
++agregarTrupalla()
++lanzarHuevo()
++mostrarHuevos()
++mostrarMatriz()
++calcularPuntaje()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>930</x>
+      <y>150</y>
+      <w>210</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>Kromi
+--
+-anoDeFabricacion: int
+-marca: String
+--
++getanoDeFabricacion(): int
++setanoDeFabricacion(): int
++getMarca(): String
++setMarca(): String
++toString(): String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>930</x>
+      <y>370</y>
+      <w>210</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>Caguano
+--
+-alcanceDeTiro: float
+-colorDeConfeti: String
+--
++getAlcanceDeTipo(): float
++setAlcanceDeTipo(): float
++getColorDeConfeti(): String
++setColorDeConfeti(): String
++toString(): String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>930</x>
+      <y>590</y>
+      <w>210</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>Trupalla
+--
+-nivelDeArmadura: int
+-nombreOperador:
+--
++getNivelDeArmadura(): int
++setNivelDeArmadura(): int
++getNombreOperador(): String
++setNombreOperador(): String
++toString(): String
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>640</x>
+      <y>470</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Huevo
+--
+-lanzamiento:
+-puntajeObtenido:
+-puntajeBonus:
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>880</x>
+      <y>140</y>
+      <w>70</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;50.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>880</x>
+      <y>360</y>
+      <w>70</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;50.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>880</x>
+      <y>580</y>
+      <w>70</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;50.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>880</x>
+      <y>150</y>
+      <w>30</w>
+      <h>470</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;450.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>840</x>
+      <y>210</y>
+      <w>70</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;50.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>490</x>
+      <y>210</y>
+      <w>170</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;150.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>380</x>
+      <y>420</y>
+      <w>280</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0;260.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>200</x>
+      <y>210</y>
+      <w>110</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>90.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>210</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Terminal&gt;&gt;
+Menu
+--
+
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
