@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Pro-test" directorySegmentName="seg_0" id="734BE9D8-6420-7855-513B-12FE3D3668B0">
+<createdBy>matia</createdBy>
+<createdTime>2020-03-12 22:08:54 UTC</createdTime>
+<ownerDesignName>db-pruebaawake</ownerDesignName>
+<engineerTo>
+<item key="77F32E53-A1C5-78DF-6D5E-A89A155F7505" value="true"/>
+</engineerTo>
+<sourcePk>26915E24-FABB-690B-5B68-D9786241CC4B</sourcePk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>C0410E14-9E7D-E9F1-EC81-E66F12E5D937</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>112419B9-EC6D-D2C1-6797-C87077CE78B1</targetEntity>
+<transferable>true</transferable>
+</Relation>

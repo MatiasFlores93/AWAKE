@@ -1,0 +1,90 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="BAB2B499-7FB6-542F-F298-C2CF2BBA9825" name="eva-pre">
+<createdBy>matia</createdBy>
+<createdTime>2020-03-13 01:05:42 UTC</createdTime>
+<generatorID>5539D668-0C15-8A8C-879F-3EFAB3041E2B</generatorID>
+<ownerDesignName>db-pruebaawake</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id-eva-pre" id="DD735EE1-2B98-61C7-922B-0C554DFF9DE2">
+<createdBy>matia</createdBy>
+<createdTime>2020-03-13 01:05:42 UTC</createdTime>
+<commentInRDBMS><![CDATA[pk de la relacion mn de evaluacion con productos]]></commentInRDBMS>
+<generatorID>19A88778-4937-F6BD-0DC8-9587159AB8EF</generatorID>
+<ownerDesignName>db-pruebaawake</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Evaluacion_ID_Eva" id="28E33A36-ABDD-A646-F284-0B46FA484A7E">
+<createdBy>matia</createdBy>
+<createdTime>2020-03-13 01:05:42 UTC</createdTime>
+<generatorID>0731FFB7-5391-3F23-E6F6-D60DD4CE8AB8</generatorID>
+<ownerDesignName>db-pruebaawake</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="64074634-53B7-1274-AE15-FAA6FA3F3243" referredColumn="13707953-AB68-AB20-B38C-E3127D2225F2"/>
+</associations>
+</Column>
+<Column name="Preguntas_ID_pre" id="B5E034EE-D344-41AB-4B13-CB39BDDC77A4">
+<createdBy>matia</createdBy>
+<createdTime>2020-03-13 01:05:42 UTC</createdTime>
+<generatorID>381DC62A-CB01-8502-9898-A213BCBFED23</generatorID>
+<ownerDesignName>db-pruebaawake</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="054F5194-7302-0604-60EB-DFB249BD40B2" referredColumn="371633B7-30F9-77EC-3B72-7F35C997AD1A"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C479D17E-ECFD-AF5F-56AE-B38CC88FA461" name="eva-pre_PK">
+<createdBy>matia</createdBy>
+<createdTime>2020-03-13 01:05:42 UTC</createdTime>
+<generatorID>9D1C17BC-1C5E-E4CC-1E0E-6BD220E27CE1</generatorID>
+<ownerDesignName>db-pruebaawake</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DD735EE1-2B98-61C7-922B-0C554DFF9DE2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A8906FDC-174B-CF46-7C9C-C8BA5DCB2C04" name="eva-pre_Evaluacion_FK">
+<createdBy>matia</createdBy>
+<createdTime>2020-03-13 01:05:42 UTC</createdTime>
+<generatorID>7C2FE2EB-D612-054B-BFAC-B550D41BD8E6</generatorID>
+<ownerDesignName>db-pruebaawake</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="28E33A36-ABDD-A646-F284-0B46FA484A7E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8571ADDC-9386-CC23-B193-337AADA9C512" name="eva-pre_Preguntas_FK">
+<createdBy>matia</createdBy>
+<createdTime>2020-03-13 01:05:42 UTC</createdTime>
+<generatorID>D6EDE5E2-0A68-87EB-79AC-F2AE6EC1B9C2</generatorID>
+<ownerDesignName>db-pruebaawake</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B5E034EE-D344-41AB-4B13-CB39BDDC77A4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

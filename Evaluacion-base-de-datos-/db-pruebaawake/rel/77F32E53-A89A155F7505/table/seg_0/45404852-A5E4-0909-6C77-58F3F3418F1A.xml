@@ -1,0 +1,88 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="45404852-A5E4-0909-6C77-58F3F3418F1A" name="alu-res">
+<createdBy>matia</createdBy>
+<createdTime>2020-03-13 01:05:42 UTC</createdTime>
+<generatorID>7D17DD5B-00C1-016D-9A03-1BB5DBF2282F</generatorID>
+<ownerDesignName>db-pruebaawake</ownerDesignName>
+<ordsAlias>alures</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_a-r" id="970A9D0D-8307-7140-6BAE-928DB5B3A1D8">
+<createdBy>matia</createdBy>
+<createdTime>2020-03-13 01:05:42 UTC</createdTime>
+<generatorID>E6C461CE-CF66-2016-6ACE-5D5E3BA74ED8</generatorID>
+<ownerDesignName>db-pruebaawake</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Alumno_Id_Alum" id="A7965220-982A-63C7-2766-D552FADE12EC">
+<createdBy>matia</createdBy>
+<createdTime>2020-03-13 01:05:42 UTC</createdTime>
+<generatorID>D09C4073-AF04-E2D7-2760-586FDAF3C4DB</generatorID>
+<ownerDesignName>db-pruebaawake</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7691C222-3EF4-4FE3-5211-95DA2AE86518" referredColumn="8792E36A-E52F-9A3E-3671-DE5E4478A859"/>
+</associations>
+</Column>
+<Column name="Respuestas_ID_Res" id="4B4F45EB-0E11-79C7-2B02-86684B39C273">
+<createdBy>matia</createdBy>
+<createdTime>2020-03-13 01:05:42 UTC</createdTime>
+<generatorID>80F6C2A5-13FA-01DF-EB10-924627A92755</generatorID>
+<ownerDesignName>db-pruebaawake</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7BF650FD-1F3B-502C-415B-F77DA0E654DB" referredColumn="030EC5D6-359D-2FFA-C73A-E0EA930047F1"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A6124247-CBE2-FA98-4B8D-D81B28561D70" name="alu-res_PK">
+<createdBy>matia</createdBy>
+<createdTime>2020-03-13 01:05:42 UTC</createdTime>
+<generatorID>D80D622A-1198-F6A4-A016-178A4F5047A3</generatorID>
+<ownerDesignName>db-pruebaawake</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="970A9D0D-8307-7140-6BAE-928DB5B3A1D8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0D3F98CD-0CC8-C6A2-2745-E7D95CAC8989" name="a-r_FK">
+<createdBy>matia</createdBy>
+<createdTime>2020-03-13 01:05:42 UTC</createdTime>
+<generatorID>7EEE1685-860F-53E3-64CF-2681F69E1C74</generatorID>
+<ownerDesignName>db-pruebaawake</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A7965220-982A-63C7-2766-D552FADE12EC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="534A92D1-F235-84CA-9F9E-ED565E606787" name="r-a_FK">
+<createdBy>matia</createdBy>
+<createdTime>2020-03-13 01:05:42 UTC</createdTime>
+<generatorID>A3FC7398-C843-535B-459A-9AD21A2C9CD2</generatorID>
+<ownerDesignName>db-pruebaawake</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4B4F45EB-0E11-79C7-2B02-86684B39C273"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

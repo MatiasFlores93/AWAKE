@@ -1,0 +1,76 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2FB01D94-2B44-0F8B-CAFC-9D6B09488255" name="cur-alum">
+<createdBy>matia</createdBy>
+<createdTime>2020-03-13 01:05:42 UTC</createdTime>
+<ownerDesignName>db-pruebaawake</ownerDesignName>
+<ordsAlias>relation_13</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Curso_ID_Curso" id="C8F7D9B9-4B04-8467-106D-8493FAC7F385">
+<createdBy>matia</createdBy>
+<createdTime>2020-03-13 01:05:42 UTC</createdTime>
+<ownerDesignName>db-pruebaawake</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="21671D3C-87D9-A058-D246-86185F7F88E5" referredColumn="E9C06B28-7DF5-27C1-72F1-9E6C9A2ACDBB"/>
+</associations>
+</Column>
+<Column name="Alumno_Id_Alum" id="1814B492-210D-35D5-8611-AAA2D2093A6F">
+<createdBy>matia</createdBy>
+<createdTime>2020-03-13 01:05:42 UTC</createdTime>
+<ownerDesignName>db-pruebaawake</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="31DD1BC7-4E5F-8313-313B-6ECB34AA829F" referredColumn="8792E36A-E52F-9A3E-3671-DE5E4478A859"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B9AD3CCB-5F3C-A115-D79E-379448750FD7" name="Relation_13_PK">
+<createdBy>matia</createdBy>
+<createdTime>2020-03-13 01:05:42 UTC</createdTime>
+<ownerDesignName>db-pruebaawake</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C8F7D9B9-4B04-8467-106D-8493FAC7F385"/>
+<colUsage columnID="1814B492-210D-35D5-8611-AAA2D2093A6F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C74A4DE2-0AA8-DA47-B7E4-540559D0ED0D" name="Curso_FK">
+<createdBy>matia</createdBy>
+<createdTime>2020-03-13 01:05:42 UTC</createdTime>
+<generatorID>44B5F3CA-86A4-C021-6113-A56A2E86EB5C</generatorID>
+<ownerDesignName>db-pruebaawake</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C8F7D9B9-4B04-8467-106D-8493FAC7F385"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C84B6EDE-F4C7-4FB4-060C-CE9F889494B0" name="cur-alum_Alumno_FK">
+<createdBy>matia</createdBy>
+<createdTime>2020-03-13 16:23:17 UTC</createdTime>
+<generatorID>10731587-FDB4-021F-40F8-8E0832701214</generatorID>
+<ownerDesignName>db-pruebaawake</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1814B492-210D-35D5-8611-AAA2D2093A6F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

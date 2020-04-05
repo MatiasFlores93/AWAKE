@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="alum-res" directorySegmentName="seg_0" id="7EEE1685-860F-53E3-64CF-2681F69E1C74">
+<createdBy>matia</createdBy>
+<createdTime>2020-03-12 23:53:36 UTC</createdTime>
+<ownerDesignName>db-pruebaawake</ownerDesignName>
+<engineerTo>
+<item key="77F32E53-A1C5-78DF-6D5E-A89A155F7505" value="true"/>
+</engineerTo>
+<sourcePk>10731587-FDB4-021F-40F8-8E0832701214</sourcePk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>4C09B566-49D3-02F4-51C6-2446E35A795E</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>7D17DD5B-00C1-016D-9A03-1BB5DBF2282F</targetEntity>
+<transferable>true</transferable>
+</Relation>

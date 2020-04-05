@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D474F6DD-83AA-17C7-95C2-27E9B71DE3D5" name="cur-eva">
+<createdBy>matia</createdBy>
+<createdTime>2020-03-13 01:05:42 UTC</createdTime>
+<ownerDesignName>db-pruebaawake</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Curso_ID_Curso" id="FA916D3F-D4DC-B7D1-F044-2C57B0CF6452">
+<createdBy>matia</createdBy>
+<createdTime>2020-03-13 01:05:42 UTC</createdTime>
+<ownerDesignName>db-pruebaawake</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5248583C-57A5-36F5-EFD0-EED5824EABDC" referredColumn="E9C06B28-7DF5-27C1-72F1-9E6C9A2ACDBB"/>
+</associations>
+</Column>
+<Column name="Evaluacion_ID_Eva" id="FAEA2ECF-6AC2-D1C9-E3E5-F36E1361E277">
+<createdBy>matia</createdBy>
+<createdTime>2020-03-13 01:05:42 UTC</createdTime>
+<ownerDesignName>db-pruebaawake</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="49E5111B-1F37-9F38-FA89-6CECD618BB54" referredColumn="13707953-AB68-AB20-B38C-E3127D2225F2"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3C16DF2F-51BD-52B0-C63B-18F10CB90396" name="cur-eva_PK">
+<createdBy>matia</createdBy>
+<createdTime>2020-03-13 01:05:42 UTC</createdTime>
+<ownerDesignName>db-pruebaawake</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FA916D3F-D4DC-B7D1-F044-2C57B0CF6452"/>
+<colUsage columnID="FAEA2ECF-6AC2-D1C9-E3E5-F36E1361E277"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="20D865FB-4480-3339-A68F-6665CA147050" name="cur-eva_Curso_FK">
+<createdBy>matia</createdBy>
+<createdTime>2020-03-13 01:05:42 UTC</createdTime>
+<generatorID>42BAFC6F-8AD2-7D68-521E-3AE29DE473B7</generatorID>
+<ownerDesignName>db-pruebaawake</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FA916D3F-D4DC-B7D1-F044-2C57B0CF6452"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="722F6DBF-7EDF-B49C-BB4F-3FA297E7234C" name="cur-eva_Evaluacion_FK">
+<createdBy>matia</createdBy>
+<createdTime>2020-03-13 01:05:42 UTC</createdTime>
+<generatorID>42BAFC6F-8AD2-7D68-521E-3AE29DE473B7</generatorID>
+<ownerDesignName>db-pruebaawake</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FAEA2ECF-6AC2-D1C9-E3E5-F36E1361E277"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

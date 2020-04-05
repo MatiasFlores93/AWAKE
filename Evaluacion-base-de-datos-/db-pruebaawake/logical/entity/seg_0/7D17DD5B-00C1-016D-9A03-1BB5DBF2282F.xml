@@ -1,0 +1,71 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="7D17DD5B-00C1-016D-9A03-1BB5DBF2282F" name="alu-res">
+<createdBy>matia</createdBy>
+<createdTime>2020-03-12 23:52:29 UTC</createdTime>
+<ownerDesignName>db-pruebaawake</ownerDesignName>
+<engineerTo>
+<item key="77F32E53-A1C5-78DF-6D5E-A89A155F7505" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_a-r" id="E6C461CE-CF66-2016-6ACE-5D5E3BA74ED8">
+<createdBy>matia</createdBy>
+<createdTime>2020-03-12 23:53:12 UTC</createdTime>
+<ownerDesignName>db-pruebaawake</ownerDesignName>
+<engineerTo>
+<item key="77F32E53-A1C5-78DF-6D5E-A89A155F7505" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Id_Alum" id="D09C4073-AF04-E2D7-2760-586FDAF3C4DB">
+<createdBy>matia</createdBy>
+<createdTime>2020-03-12 23:53:36 UTC</createdTime>
+<generatorID>7EEE1685-860F-53E3-64CF-2681F69E1C74</generatorID>
+<ownerDesignName>db-pruebaawake</ownerDesignName>
+<engineerTo>
+<item key="77F32E53-A1C5-78DF-6D5E-A89A155F7505" value="true"/>
+</engineerTo>
+<referedAttribute>34B50FCF-7C51-3E67-1EC9-EB0417C1877B</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_Res" id="80F6C2A5-13FA-01DF-EB10-924627A92755">
+<createdBy>matia</createdBy>
+<createdTime>2020-03-12 23:53:55 UTC</createdTime>
+<generatorID>A3FC7398-C843-535B-459A-9AD21A2C9CD2</generatorID>
+<ownerDesignName>db-pruebaawake</ownerDesignName>
+<engineerTo>
+<item key="77F32E53-A1C5-78DF-6D5E-A89A155F7505" value="true"/>
+</engineerTo>
+<referedAttribute>94A9FDDF-E6FA-ED71-0B3F-84815DB2B91F</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="D80D622A-1198-F6A4-A016-178A4F5047A3" name="alu-res PK">
+<createdBy>matia</createdBy>
+<createdTime>2020-03-13 00:55:35 UTC</createdTime>
+<ownerDesignName>db-pruebaawake</ownerDesignName>
+<engineerTo>
+<item key="77F32E53-A1C5-78DF-6D5E-A89A155F7505" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>E6C461CE-CF66-2016-6ACE-5D5E3BA74ED8</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

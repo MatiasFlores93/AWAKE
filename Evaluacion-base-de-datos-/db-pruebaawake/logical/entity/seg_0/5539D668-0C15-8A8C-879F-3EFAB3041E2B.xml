@@ -1,0 +1,74 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="5539D668-0C15-8A8C-879F-3EFAB3041E2B" name="eva-pre">
+<createdBy>matia</createdBy>
+<createdTime>2020-03-13 00:09:56 UTC</createdTime>
+<ownerDesignName>db-pruebaawake</ownerDesignName>
+<engineerTo>
+<item key="77F32E53-A1C5-78DF-6D5E-A89A155F7505" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id-eva-pre" id="19A88778-4937-F6BD-0DC8-9587159AB8EF">
+<createdBy>matia</createdBy>
+<createdTime>2020-03-13 00:10:10 UTC</createdTime>
+<commentInRDBMS><![CDATA[pk de la relacion mn de evaluacion con productos]]></commentInRDBMS>
+<ownerDesignName>db-pruebaawake</ownerDesignName>
+<engineerTo>
+<item key="77F32E53-A1C5-78DF-6D5E-A89A155F7505" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_Eva" id="0731FFB7-5391-3F23-E6F6-D60DD4CE8AB8">
+<createdBy>matia</createdBy>
+<createdTime>2020-03-13 00:10:59 UTC</createdTime>
+<generatorID>7C2FE2EB-D612-054B-BFAC-B550D41BD8E6</generatorID>
+<ownerDesignName>db-pruebaawake</ownerDesignName>
+<engineerTo>
+<item key="77F32E53-A1C5-78DF-6D5E-A89A155F7505" value="true"/>
+</engineerTo>
+<referedAttribute>2754D914-E435-58FD-1B4F-0D5B862805E4</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_pre" id="381DC62A-CB01-8502-9898-A213BCBFED23">
+<createdBy>matia</createdBy>
+<createdTime>2020-03-13 00:11:07 UTC</createdTime>
+<generatorID>D6EDE5E2-0A68-87EB-79AC-F2AE6EC1B9C2</generatorID>
+<ownerDesignName>db-pruebaawake</ownerDesignName>
+<engineerTo>
+<item key="77F32E53-A1C5-78DF-6D5E-A89A155F7505" value="true"/>
+</engineerTo>
+<referedAttribute>48173D44-325C-1D3C-85B6-4D747512FC41</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="9D1C17BC-1C5E-E4CC-1E0E-6BD220E27CE1" name="eva-pre PK">
+<createdBy>matia</createdBy>
+<createdTime>2020-03-13 00:10:47 UTC</createdTime>
+<ownerDesignName>db-pruebaawake</ownerDesignName>
+<engineerTo>
+<item key="77F32E53-A1C5-78DF-6D5E-A89A155F7505" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>19A88778-4937-F6BD-0DC8-9587159AB8EF</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

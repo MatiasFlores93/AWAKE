@@ -1,0 +1,52 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="EE04C8BE-92F5-F5B5-7F98-158654AA051E" name="Programa">
+<createdBy>matia</createdBy>
+<createdTime>2020-03-13 01:05:42 UTC</createdTime>
+<generatorID>C0410E14-9E7D-E9F1-EC81-E66F12E5D937</generatorID>
+<ownerDesignName>db-pruebaawake</ownerDesignName>
+<abbreviation>pro</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_Pro" id="EF06FF22-C41E-40D3-6314-9EB31B35517A">
+<createdBy>matia</createdBy>
+<createdTime>2020-03-13 01:05:42 UTC</createdTime>
+<generatorID>9BE9ABA2-D5FD-6A57-EB33-D6296CC5FFD3</generatorID>
+<ownerDesignName>db-pruebaawake</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nombre" id="C983A867-BCBE-99FA-CC03-93D2E860D802">
+<createdBy>matia</createdBy>
+<createdTime>2020-03-13 01:05:42 UTC</createdTime>
+<commentInRDBMS><![CDATA[Nombre del programa ejemplo (desarrollador full stack)]]></commentInRDBMS>
+<generatorID>BE486A7F-368F-6856-D843-112F57E13732</generatorID>
+<ownerDesignName>db-pruebaawake</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B803D202-F934-60F3-CEF3-A98802A2924F" name="Programa_PK">
+<createdBy>matia</createdBy>
+<createdTime>2020-03-13 01:05:42 UTC</createdTime>
+<generatorID>26915E24-FABB-690B-5B68-D9786241CC4B</generatorID>
+<ownerDesignName>db-pruebaawake</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EF06FF22-C41E-40D3-6314-9EB31B35517A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

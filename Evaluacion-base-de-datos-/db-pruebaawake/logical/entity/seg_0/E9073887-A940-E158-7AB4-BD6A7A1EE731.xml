@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="E9073887-A940-E158-7AB4-BD6A7A1EE731" name="Curso">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-12 17:52:50 UTC</createdTime>
+<ownerDesignName>db-pruebaawake</ownerDesignName>
+<engineerTo>
+<item key="77F32E53-A1C5-78DF-6D5E-A89A155F7505" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_Curso" id="17751419-69B1-AD03-1024-77E0E91208B8">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-12 17:52:55 UTC</createdTime>
+<ownerDesignName>db-pruebaawake</ownerDesignName>
+<engineerTo>
+<item key="77F32E53-A1C5-78DF-6D5E-A89A155F7505" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="NombreCurso" id="C5D4AC36-8C9A-2106-B1C8-0D263F5DC08C">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-12 17:53:31 UTC</createdTime>
+<ownerDesignName>db-pruebaawake</ownerDesignName>
+<engineerTo>
+<item key="77F32E53-A1C5-78DF-6D5E-A89A155F7505" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_Pro" id="963707F5-AC00-AF50-F36D-819833D199DA">
+<createdBy>matia</createdBy>
+<createdTime>2020-03-12 22:10:33 UTC</createdTime>
+<generatorID>F1C51D2B-73F8-5E36-65C2-8D30F2B85D49</generatorID>
+<ownerDesignName>db-pruebaawake</ownerDesignName>
+<engineerTo>
+<item key="77F32E53-A1C5-78DF-6D5E-A89A155F7505" value="true"/>
+</engineerTo>
+<referedAttribute>9BE9ABA2-D5FD-6A57-EB33-D6296CC5FFD3</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="934CF3F1-7D37-7704-C731-C68C031C4D5B" name="Curso PK">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-12 17:53:08 UTC</createdTime>
+<ownerDesignName>db-pruebaawake</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="77F32E53-A1C5-78DF-6D5E-A89A155F7505" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>17751419-69B1-AD03-1024-77E0E91208B8</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

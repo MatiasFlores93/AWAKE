@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="res-preg" directorySegmentName="seg_0" id="7F74F0F1-2B0B-22CD-737C-2EBB5DFE46C9">
+<createdBy>matia</createdBy>
+<createdTime>2020-03-12 23:43:55 UTC</createdTime>
+<ownerDesignName>db-pruebaawake</ownerDesignName>
+<engineerTo>
+<item key="77F32E53-A1C5-78DF-6D5E-A89A155F7505" value="true"/>
+</engineerTo>
+<sourcePk>0A7AC61C-E1C3-94DD-ED10-582C5ECF7A25</sourcePk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>526B55CF-7974-D928-515C-F258E3329871</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>8E026BC2-6F02-5DFA-A957-4EB0491B4FB0</targetEntity>
+<transferable>true</transferable>
+</Relation>
