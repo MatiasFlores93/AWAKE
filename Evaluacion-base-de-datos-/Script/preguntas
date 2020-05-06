@@ -1,0 +1,107 @@
+--Primera pregunta
+--  Conocer el número de evaluaciones por curso.
+SELECT
+    curso.nombrecurso, Count ("cur-eva".CURSO_ID_CURSO) as evaluaciones 
+FROM curso LEFT JOIN "cur-eva"
+on "cur-eva".CURSO_ID_CURSO=curso.id_curso
+ GROUP BY curso.nombrecurso;
+
+
+ --Segunda Pregunta
+ --  Conocer el número de cursos sin evaluacion 
+SELECT
+    curso.nombrecurso, Count ("cur-eva".CURSO_ID_CURSO) as evaluaciones 
+FROM curso INNER JOIN "cur-eva" 
+on "cur-eva".CURSO_ID_CURSO=curso.id_curso
+WHERE curso.id_curso IS NULL
+ GROUP BY curso.nombrecurso;
+
+
+ -- Tercera Pregunta 
+ -- determinar evaluaciones con problemas 
+ -- evaluaciones sin preguntas
+ 
+SELECT evaluacion.nombre, COUNT(preguntas.id_pre) AS Cantidad 
+FROM evaluacion 
+LEFT JOIN "eva-pre"
+ON "eva-pre".EVALUACION_ID_EVA=evaluacion.id_eva
+LEFT JOIN preguntas
+ON "eva-pre".PREGUNTAS_ID_PRE=preguntas.id_pre
+WHERE preguntas.id_pre IS NULL
+GROUP BY evaluacion.nombre;
+
+-- Evaluaciones con 2 o menos preguntas 
+SELECT *
+FROM evaluacion 
+INNER JOIN "eva-pre"
+ON "eva-pre".EVALUACION_ID_EVA=evaluacion.id_eva
+INNER JOIN preguntas
+ON "eva-pre".PREGUNTAS_ID_PRE=preguntas.id_pre
+INNER JOIN respuestas
+ON respuestas.id_res
+--HAVING COUNT(respuesta.id_respuesta <= 2
+
+ CREATE OR REPLACE FORCE VIEW "p3"
+-- Cuarta pregunta
+-- Determinar cuántos alumnos hay en cada curso
+SELECT curso.id_curso, curso.nombrecurso, COUNT(alumno.id_alum) as cantidadAlumnos
+    
+FROM curso
+inner join "cur-alum"
+ON "cur-alum".CURSO_ID_CURSO=curso.id_curso
+inner join alumno
+on "cur-alum".ALUMNO_ID_ALUM=alumno.id_alum
+GROUP by curso.id_curso,curso.nombrecurso;
+
+-- quinta pregunta  
+
+
+CREATE OR REPLACE  VIEW alu-res AS
+SELECT alumno.nombre,alumno.apellido,respuestas.escorrecto,respuestas.porcentaje,preguntas.puntaje
+    
+FROM "alu-res"
+inner JOIN alumno
+on "alu-res"."id_a-r"= alumno.id_alum
+inner join respuestas 
+on "alu-res".RESPUESTAS_ID_RES=respuestas.id_res
+inner join preguntas
+on preguntas.id_pre=respuestas.preguntas_id
+GRUOP evaluacion.id_eva, evaluacion.nombre, evaluacion.unidad
+ORDER BY id; 
+
+
+
+--pregunta 6 
+--No terminadda  ni normalizada  solo extructura 
+
+CREATE OR REPLACE VIEW  normalizadas AS
+SELECT
+    left.alumno_id_alum,alumno.nombre, alumno.apellido, respuestas.porcentaje, respuestas.preguntas_id, SUM (respuestas.porcentaje) AS puntaje
+    case when (7* SUM (respuesta.porcentaje) <1 
+    then 1  
+    END as NOTA 
+FROM  "alu-res" 
+LEFT JOIN  alumno
+ON left.alumno_id_alum= alumno.id_alum
+LEFT JOIN respuestas 
+ON left.respuestas_id_res=respuestas.id_res
+
+GROUP BY  alumno.apellido   ,alumno.nombre,respuestas.escorrecto
+
+-- Pregunta 7 
+select *
+from normalizadas
+where normalizadas >4
+ORDER BY id_alumno;
+
+-- pregunta  8 
+
+select nombrecurso, nombretest, avg(puntaje_normalizado)
+from puntaje_normalizado
+group by nombrecurso, nombretest;
+
+SELECT
+    nombrecurso, evaluacion.nombre, AVG(normalizadas)
+FROM normalziadas 
+GROUP BY evaluacion.nombre
+

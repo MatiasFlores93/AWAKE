@@ -1,0 +1,129 @@
+
+
+-- agregar datos a curso
+
+INSERT INTO curso VALUES (1, 'Base de datos');
+INSERT INTO curso VALUES (2, 'Programacion I');
+INSERT INTO curso VALUES (3, 'Desarrollo Java');
+
+
+-- ingresar alumnos 
+INSERT into alumno VALUES(01, 'Matias', 'Flores Farias', 1);
+INSERT into alumno VALUES(02, 'Conde', 'Dooku', 1);
+INSERT into alumno VALUES(03, 'Emperador', 'Palpatine', 1);
+INSERT into alumno VALUES(04, 'Jango', 'Fett', 2);
+INSERT into alumno VALUES(05, 'Java', ' Hutt', 2);
+INSERT into alumno VALUES(06, 'Poe', 'Dameron', 1);
+INSERT into alumno VALUES(07, 'Old', ' Daka', 1);
+INSERT into alumno VALUES(08, 'C3-P0', 1);
+INSERT into alumno VALUES(09, 'R2D2', 1);
+INSERT into alumno VALUES(010, 'Darth', 'Maul', 1);
+INSERT into alumno VALUES(011, 'Boba', 'Fett', 1);
+INSERT into alumno VALUES(012, 'The Child', 'Baby Yoda', 1);
+INSERT into alumno VALUES(013, 'Rey', 'Palpatine', 1);
+INSERT into alumno VALUES(014, 'Comandante', 'Cody', 1);
+INSERT into alumno VALUES(015, 'C', '555 , 1);
+INSERT into alumno VALUES(016, 'Ezra','Brig', 1);
+INSERT into alumno VALUES(017, 'Kylo', 'Ren', 1);
+INSERT into alumno VALUES(018, 'Luck', 'Skywallker', 1);
+INSERT into alumno VALUES(019, 'Anakin', 'Skywallker', 1);
+INSERT into alumno VALUES(020, 'Asoha', 'Tanos', 3);
+INSERT into alumno VALUES(021, 'Old', 'Ben Kenobi', 1);
+INSERT into alumno VALUES(022, 'Padme', 'Amidala', 1);
+INSERT into alumno VALUES(023, 'Jar Jar', 'Bing', 3);
+
+--Insertar datos a la tabla programa
+INSERT INTO programa VALUES (1,'Full Stack Java');
+INSERT INTO programa VALUES (2,'Bases de datos');
+INSERT INTO programa VALUES (3,'Full Stack PHP');
+INSERT INTO programa VALUES (4,'Apps Android');
+INSERT INTO programa VALUES (5,'Font-End Js');
+
+-- Insertar datos a la tabla evaluacion 
+
+INSERT INTO "MATIAS"."EVALUACION" (ID_EVA, NOMBRE, DESCRIPCION, UNIDAD, AUTOR, FECHACREACION, PUNTUACION, PROGRAMA_ID_PRO) VALUES ('2', 'Segunda Evaluacion ', 'Evaluacion base de datso', 'base de datos', 'Manuel Morales', TO_DATE('2020-03-06 13:33:34', 'YYYY-MM-DD HH24:MI:SS'), '100', '1');
+
+
+INSERT INTO "MATIAS"."EVALUACION" (ID_EVA, NOMBRE, DESCRIPCION, UNIDAD, AUTOR, FECHACREACION, PUNTUACION, PROGRAMA_ID_PRO) VALUES ('3', 'Tercera Evaluacion ', 'Evaluacion de material desing', 'Diseño', 'Alan Rockerford', TO_DATE('2020-03-02 13:35:14', 'YYYY-MM-DD HH24:MI:SS'), '100', '2');
+
+-- Insertar datos a la tabla Preguntas 
+
+
+INSERT INTO preguntas VALUES (1,'¿Que es una pk?', 10);
+INSERT INTO preguntas VALUES (2,'¿Que es una fk?', 10);
+INSERT INTO preguntas VALUES (3,'¿Que es un trigger?', 10);
+INSERT INTO preguntas VALUES (4,'¿Que es una tupla?', 10);
+INSERT INTO preguntas VALUES (5,'¿Que es un mer?', 10);
+INSERT INTO preguntas VALUES (6,'¿Que es DDL?', 10);
+INSERT INTO preguntas VALUES (7,'¿Que es PL/SQL?', 10);
+INSERT INTO preguntas VALUES (8,'¿Que es GIT?', 10);
+INSERT INTO preguntas VALUES (9,'¿Que es OLAP ?', 10);
+INSERT INTO preguntas VALUES (10,'¿Que es una QUERY?', 10);
+INSERT INTO preguntas VALUES (11,'¿Que es JAVA?', 10);
+
+
+-- Insertar datos a la tala respuesta  
+INSERT INTO respuestas VALUES ('1', 'Clave Primaria', 'S', '5', '1');
+INSERT INTO respuestas VALUES ('2', 'Clave Foranea', 'N', '0', '1');
+INSERT INTO respuestas VALUES ('3', 'Primary key', 'S', '5', '1');
+
+INSERT INTO respuestas VALUES ('4', 'Clave Primaria', 'N', '0', '2');
+INSERT INTO respuestas VALUES ('5', 'Clave Foranea', 'S', '5', '2');
+INSERT INTO respuestas VALUES ('6', 'Foreing Ket', 'S', '5', '2');
+
+INSERT INTO respuestas VALUES ('7', 'Un disparador', 'S', '5', '3');
+INSERT INTO respuestas VALUES ('8', 'UN desencadenador', 'S', '5', '3');
+INSERT INTO respuestas VALUES ('9', 'Una entidad relacional', 'N', '0', '3');
+
+INSERT INTO respuestas VALUES ('10', 'Un Registro de una tabla ', 'S', '5', '4');
+INSERT INTO respuestas VALUES ('11', 'Una lista ordenada de valores', 'S', '5', '4');
+INSERT INTO respuestas VALUES ('12', 'Una Trupalla', 'N', '0', '4');
+
+INSERT INTO respuestas VALUES ('13', 'Un  Modelo de base de datos', 'S', '5', '5');
+INSERT INTO respuestas VALUES ('14', 'Modelo entidad relacion', 'S', '5', '5');
+INSERT INTO respuestas VALUES ('15', 'relacion de modelos', 'N', '0', '5');
+
+--Llenado de relaciones alumno respuesta  
+INSERT INTO "alu-res" VALUES (1,1,1);
+INSERT INTO "alu-res" VALUES (2,1,3);
+
+INSERT INTO "alu-res" VALUES (3,2,1);
+INSERT INTO "alu-res" VALUES (4,2,3);
+
+INSERT INTO "alu-res" VALUES (5,3,1);
+INSERT INTO "alu-res" VALUES (6,3,3);
+
+INSERT INTO "alu-res" VALUES (7,4,2);
+INSERT INTO "alu-res" VALUES (8,4,1);
+
+INSERT INTO "alu-res" VALUES (9,5,1);
+INSERT INTO "alu-res" VALUES (10,5,3);
+
+INSERT INTO "alu-res" VALUES (11,6,1);
+INSERT INTO "alu-res" VALUES (12,6,3);
+
+INSERT INTO "alu-res" VALUES (13,7,1);
+INSERT INTO "alu-res" VALUES (14,7,2);
+
+INSERT INTO "alu-res" VALUES (15,8,2);
+INSERT INTO "alu-res" VALUES (16,8,3);
+
+INSERT INTO "alu-res" VALUES (17,9,2);
+INSERT INTO "alu-res" VALUES (18,9,3);
+
+INSERT INTO "alu-res" VALUES (19,10,1);
+INSERT INTO "alu-res" VALUES (20,10,2);
+
+--llenado  de  las relaciones evaluacion pregunta 
+
+INSERT INTO "eva-pre" VALUES (1,3,1);
+INSERT INTO "eva-pre" VALUES (2,3,2);
+INSERT INTO "eva-pre" VALUES (3,3,3);
+INSERT INTO "eva-pre" VALUES (4,3,4);
+INSERT INTO "eva-pre" VALUES (5,3,5);
+INSERT INTO "eva-pre" VALUES (6,3,6);
+INSERT INTO "eva-pre" VALUES (7,3,7);
+INSERT INTO "eva-pre" VALUES (8,3,8);
+INSERT INTO "eva-pre" VALUES (9,3,9);
+INSERT INTO "eva-pre" VALUES (10,3,10);
+INSERT INTO "eva-pre" VALUES (11,2,1);

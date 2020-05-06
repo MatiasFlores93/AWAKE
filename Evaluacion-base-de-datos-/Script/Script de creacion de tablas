@@ -1,0 +1,141 @@
+CREATE TABLE alumno (
+    id_alum                    INTEGER NOT NULL,
+    nombre                     VARCHAR2(100 CHAR) NOT NULL,
+    apellido                   VARCHAR2(50 CHAR),
+    "cur-alum_Curso_ID_Curso"  INTEGER NOT NULL
+);
+
+ALTER TABLE alumno ADD CONSTRAINT alumno_pk PRIMARY KEY ( id_alum );
+
+CREATE TABLE "alu-res" (
+    "id_a-r"           INTEGER NOT NULL,
+    alumno_id_alum     INTEGER NOT NULL,
+    respuestas_id_res  INTEGER NOT NULL
+);
+
+ALTER TABLE "alu-res" ADD CONSTRAINT "alu-res_PK" PRIMARY KEY ( "id_a-r" );
+
+CREATE TABLE "cur-alum" (
+    curso_id_curso  INTEGER NOT NULL,
+    alumno_id_alum  INTEGER NOT NULL
+);
+
+ALTER TABLE "cur-alum" ADD CONSTRAINT relation_13_pk PRIMARY KEY ( curso_id_curso,
+                                                                   alumno_id_alum );
+
+CREATE TABLE "cur-eva" (
+    curso_id_curso     INTEGER NOT NULL,
+    evaluacion_id_eva  INTEGER NOT NULL
+);
+
+ALTER TABLE "cur-eva" ADD CONSTRAINT "cur-eva_PK" PRIMARY KEY ( curso_id_curso,
+                                                                evaluacion_id_eva );
+
+CREATE TABLE curso (
+    id_curso         INTEGER NOT NULL,
+    nombrecurso      VARCHAR2(50 CHAR) NOT NULL,
+    programa_id_pro  INTEGER NOT NULL
+);
+
+ALTER TABLE curso ADD CONSTRAINT curso_pk PRIMARY KEY ( id_curso );
+
+CREATE TABLE evaluacion (
+    id_eva           INTEGER NOT NULL,
+    nombre           VARCHAR2(50 CHAR) NOT NULL,
+    descripcion      VARCHAR2(100 CHAR) NOT NULL,
+    programa         VARCHAR2(100 CHAR) NOT NULL,
+    unidad           VARCHAR2(50 CHAR) NOT NULL,
+    autor            VARCHAR2(100 CHAR) NOT NULL,
+    fechacreacion    DATE NOT NULL,
+    puntuacion       INTEGER DEFAULT 100,
+    alumno_nombre    VARCHAR2(100 CHAR) NOT NULL,
+    programa_id_pro  INTEGER NOT NULL
+);
+
+ALTER TABLE evaluacion ADD CONSTRAINT evaluacion_pk PRIMARY KEY ( id_eva );
+
+CREATE TABLE "eva-pre" (
+    "id-eva-pre"       INTEGER NOT NULL,
+    evaluacion_id_eva  INTEGER NOT NULL,
+    preguntas_id_pre   INTEGER NOT NULL
+);
+
+COMMENT ON COLUMN "eva-pre"."id-eva-pre" IS
+    'pk de la relacion mn de evaluacion con productos';
+
+ALTER TABLE "eva-pre" ADD CONSTRAINT "eva-pre_PK" PRIMARY KEY ( "id-eva-pre" );
+
+CREATE TABLE preguntas (
+    id_pre     INTEGER NOT NULL,
+    enunciado  VARCHAR2(100 CHAR) NOT NULL,
+    puntaje    INTEGER NOT NULL
+);
+
+ALTER TABLE preguntas ADD CONSTRAINT preguntas_pk PRIMARY KEY ( id_pre );
+
+CREATE TABLE programa (
+    id_pro  INTEGER NOT NULL,
+    nombre  VARCHAR2(100 CHAR)
+);
+
+COMMENT ON COLUMN programa.nombre IS
+    'Nombre del programa ejemplo (desarrollador full stack)';
+
+ALTER TABLE programa ADD CONSTRAINT programa_pk PRIMARY KEY ( id_pro );
+
+CREATE TABLE respuestas (
+    id_res        INTEGER NOT NULL,
+    descripcion   VARCHAR2(100 CHAR) NOT NULL,
+    escorrecto    CHAR(1) NOT NULL,
+    porcentaje    INTEGER NOT NULL,
+    preguntas_id  INTEGER NOT NULL
+);
+
+COMMENT ON COLUMN respuestas.escorrecto IS
+    ' 0 verdadero
+1 falso';
+
+ALTER TABLE respuestas ADD CONSTRAINT respuestas_pkv1 PRIMARY KEY ( id_res );
+
+ALTER TABLE respuestas ADD CONSTRAINT respuestas_pk UNIQUE ( id_res );
+
+ALTER TABLE "alu-res"
+    ADD CONSTRAINT "a-r_FK" FOREIGN KEY ( alumno_id_alum )
+        REFERENCES alumno ( id_alum );
+
+ALTER TABLE "cur-eva"
+    ADD CONSTRAINT "cur-eva_Curso_FK" FOREIGN KEY ( curso_id_curso )
+        REFERENCES curso ( id_curso );
+
+ALTER TABLE "cur-eva"
+    ADD CONSTRAINT "cur-eva_Evaluacion_FK" FOREIGN KEY ( evaluacion_id_eva )
+        REFERENCES evaluacion ( id_eva );
+
+ALTER TABLE "cur-alum"
+    ADD CONSTRAINT curso_fk FOREIGN KEY ( curso_id_curso )
+        REFERENCES curso ( id_curso );
+
+ALTER TABLE curso
+    ADD CONSTRAINT curso_programa_fk FOREIGN KEY ( programa_id_pro )
+        REFERENCES programa ( id_pro );
+
+ALTER TABLE evaluacion
+    ADD CONSTRAINT evaluacion_programa_fk FOREIGN KEY ( programa_id_pro )
+        REFERENCES programa ( id_pro );
+
+ALTER TABLE "eva-pre"
+    ADD CONSTRAINT "eva-pre_Evaluacion_FK" FOREIGN KEY ( evaluacion_id_eva )
+        REFERENCES evaluacion ( id_eva );
+
+ALTER TABLE "eva-pre"
+    ADD CONSTRAINT "eva-pre_Preguntas_FK" FOREIGN KEY ( preguntas_id_pre )
+        REFERENCES preguntas ( id_pre );
+
+ALTER TABLE "alu-res"
+    ADD CONSTRAINT "r-a_FK" FOREIGN KEY ( respuestas_id_res )
+        REFERENCES respuestas ( id_res );
+
+ALTER TABLE respuestas
+    ADD CONSTRAINT respuestas_preguntas_fk FOREIGN KEY ( preguntas_id )
+        REFERENCES preguntas ( id_pre );
+
